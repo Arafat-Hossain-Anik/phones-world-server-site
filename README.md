@@ -1,4 +1,4 @@
-# This is client side code of Phones-World
+# This is server-side code of Phones-World
 ## Main Functionality
 * `Get All Item From database`
 * `Get an single item from database`
