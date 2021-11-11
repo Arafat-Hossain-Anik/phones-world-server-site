@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Apple iPhone 12",
+        "img": "https://www.mobiledokan.com/wp-content/uploads/2020/10/Apple-iphone-12.jpg",
+        "price": "107,999",
+        "rating": 5,
+        "description": "Apple iPhone 12 comes with a 6.1 inches Super Retina XDR OLED screen which is one of its main specialties. It has a classical Apple iPhone notch design. The back camera is of dual 12+12 MP with powerful image processing capability and 4K video recording. The front one is of Dual 12 MP and SL 3D camera. Apple iPhone 12 comes with Li-ion battery with 18W fast charging solution. It has 6 GB RAM, Hexa-core CPU and Apple GPU. It is powered by a 5 nm Apple A14 Bionic chipset. The device comes with 64, 128 or 256 GB internal storage."
+    },
+    {
+        "name": "Realme GT Neo2",
+        "img": "https://www.mobiledokan.com/wp-content/uploads/2021/11/Realme-GT-Neo2-image.jpg",
+        "price": "39,990",
+        "rating": 4.5,
+        "description": "Realme GT Neo2 comes with 6.62 inches Full HD+ AMOLED screen. It has a Full-View left punch-hole design. The back camera is of triple 64+8+2 MP with PDAF, LED flash, dedicated macro camera, ultrawide lens etc. and 4K video recording. The front camera is of 16 MP. Realme GT Neo2 comes with 5000 mAh battery with 65W Fast Charging. It has 8 GB RAM, up to 3.2 GHz octa-core CPU and Adreno 650 GPU. It is powered by a Qualcomm Snapdragon 870 5G (7 nm) chipset. The device comes with 128 GB internal storage and no MicroSD slot. There is a in-display fingerprint sensor in this phone."
+    },
+    {
+        "name": "Realme 8 Pro",
+        "img": "https://www.mobiledokan.com/wp-content/uploads/2021/04/Realme-8-Pro-image.jpg",
+        "price": "27,990",
+        "rating": 4.5,
+        "description": "Realme 8 Pro comes with 6.4 inches Full HD+ Super AMOLED screen. It has a Full-View left punch-hole design. The back camera is of quad 108+8+2+2 MP with PDAF, dedicated macro camera, depth sensor, ultrawide lens etc. and 4K video recording. The front camera is of 16 MP. Realme 8 Pro comes with 4500 mAh battery with 50W SuperDart Fast Charging. It has 8 GB RAM, up to 2.3 GHz octa-core CPU and Adreno 618 GPU. It is powered by a Qualcomm Snapdragon 720G (8 nm) chipset. The device comes with 128 GB internal storage and dedicated MicroSD slot. There is a in-display fingerprint sensor in this phone."
+    },
+    {
+        "name": "Oppo Reno6",
+        "img": "https://www.mobiledokan.com/wp-content/uploads/2021/11/Oppo-Reno-6-image.jpg",
+        "price": "32,990",
+        "rating": 5,
+        "description": "Oppo Reno6 comes with 6.4 inches Full HD+ AMOLED screen. It has a left punch-hole front camera design. The back camera is of Quad 64+8+2+2 MP with PDAF, LED flash, ultrawide, depth sensor, dedicated macro camera etc. features and Ultra HD video recording option. The front camera is of 44 MP. Oppo Reno6 comes with 4310 mAh battery with 50W VOOC 4.0 fast charging. It has 8 GB RAM, up to 2.3 GHz octa-core CPU and Adreno 618 GPU. It is powered by a Qualcomm Snapdragon 720G (8 nm) chipset"
+    },
+    {
+        "name": "Tecno Camon 16 Premier",
+        "img": "https://www.mobiledokan.com/wp-content/uploads/2020/12/Tecno-Camon-16-Premier.jpg",
+        "price": "21,990",
+        "rating": 4.5,
+        "description": "Tecno Camon 16 Premier comes with 6.9 inches Full HD+ IPS LCD screen. It has a left double punch-hole front camera design. The back camera is of quad 64+8+2+2 MP with PDAF, penta-LED flash, dedicated video camera, ultrawide, depth sensor etc. features and 4K video recording option. The front camera is of dual 48+8 MP. Tecno Camon 16 Premier comes with 4500 mAh battery and 33W fast charging facility. It has 8 GB RAM, 2.05 GHz octa-core CPU and Mali-G76 MC4 GPU. It is powered by a Mediatek Helio G90T (12nm) chipset. The device comes with 128 GB internal storage and dedicated MicroSD slot. There is a side-mounted fingerprint sensor in this phone."
+    },
+    {
+        "name": "Xiaomi Mi 11X 5G",
+        "img": "https://www.mobiledokan.com/wp-content/uploads/2021/05/Xiaomi-Mi-11X-image.jpg",
+        "price": "39,999",
+        "rating": 4.5,
+        "description": "Xiaomi Mi 11X 5G comes with 6.67 inches Full HD+ Super AMOLED screen. It has a Full-View punch-hole design. Both front and backside are protected by 5th generation Gorilla Glasses. The back camera is of triple 48+8+5 MP with PDAF, LED flash, ultrawide, dedicated macro camera, etc. and 4K video recording. The front camera is of 20 MP. Mi 11X comes with 4520 mAh battery with 33W fast charging."
+    },
+    {
+        "name": "Xiaomi Poco M3",
+        "img": "https://www.mobiledokan.com/wp-content/uploads/2020/12/Xiaomi-Poco-M3.jpg",
+        "price": "17,500",
+        "rating": 5,
+        "description": "Xiaomi Poco M3 comes with 6.53 inches Full HD+ IPS LCD screen. It has a waterdrop notch front camera design. The device is protected by a 3rd generation Gorilla Glass in the front. The back camera is of triple 48+2+2 MP with PDAF, f/1.8 aperture, LED flash, dedicated macro camera, HDR, depth sensor etc. and Full HD video recording. The front camera is of 8 MP. Poco M3 comes with 6000 mAh big battery with 18W Fast Charging support."
+    },
+    {
+        "name": "Samsung Galaxy S21 Ultra",
+        "img": "https://www.mobiledokan.com/wp-content/uploads/2021/01/Samsung-Galaxy-S21-Ultra-image.jpg",
+        "price": "139,999",
+        "rating": 5,
+        "description": "Samsung Galaxy S21 Ultra comes with 6.8 inches Quad HD+ Dynamic AMOLED 2X screen. It has a punch-hole front camera design. The back camera is of quad 108+10+10+12 MP with Laser AF, OIS, periscope telephoto, 10x optical zoom, ultrawide etc. and up to 8K video recording. The front camera is of 40 Megapixel. Galaxy S21 Ultra comes with 5000 mAh battery with 25W fast charging. It has 12/16 GB RAM, up to 2.9 GHz octa-core CPU and Mali-G78 MP14 GPU. It is powered by a 5 nm Exynos 2100 chipset."
+    },
+    {
+        "name": "Samsung Galaxy Z Flip3 5G",
+        "img": "https://www.mobiledokan.com/wp-content/uploads/2021/09/Samsung-Galaxy-Z-Flip3-5G-image.jpg",
+        "price": "109,999",
+        "rating": 4.5,
+        "description": "Galaxy Z Flip3 has a foldable smartphone design. The back camera is of dual 12+12 MP with 4K video recording option. The front camera is of 10 MP. Galaxy Z Flip3 5G comes with 3300 mAh battery. It has 8 GB RAM, up to 2.84 GHz octa-core CPU and Adreno 660 GPU. It is powered by a Qualcomm Snapdragon 888 5G (5 nm) chipset. The device comes with 128 or 256 GB internal storage and no MicroSD slot. There is a side-mounted fingerprint sensor in this phone."
+    },
+    {
+        "name": "Nokia 5.1 Plus",
+        "img": "https://www.mobiledokan.com/wp-content/uploads/2019/03/Nokia-5.1-Plus-Black.jpg",
+        "price": "21,990",
+        "rating": 5,
+        "description": "Nokia 5.1 is coming with Android One with stock Android experience. You may or may not have heard the term “Stock Android.” It is also called pure or vanilla Android. It is the basic, unmodified Android version as it is without any UI from the manufacturer and added features like Xiaomi MIUI, Huawei EMUI or Samsung Experience. Here you will get a clean, much faster interface/performance, bloatware-free device meaning no unnecessary pre-installed apps and quick direct OS updates from Google."
+    }
+]
