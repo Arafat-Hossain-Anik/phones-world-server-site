@@ -16,9 +16,11 @@ async function run() {
     try {
         await client.connect();
         const database = client.db('PhonesDB');
+        const database2 = client.db('travel-point');
+        const myOrderCollection2 = database2.collection('usersOrders');
         const serviceCollection = database.collection('phones');
         const myOrderCollection = database.collection('userOrders');
-        const adminCollection = database.collection('admin');
+        const reviewCollection = database.collection('userReviews');
         console.log('database connected');
         // getting from database
         app.get('/services', async (req, res) => {
@@ -26,7 +28,88 @@ async function run() {
             const services = await cursor.toArray();
             res.send(services)
         });
+        app.get('/services/:id', async (req, res) => {
+            const id = req.params.id;
+            console.log(id);
+            const query = { _id: ObjectId(id) };
+            const service = await serviceCollection.findOne(query);
+            res.json(service)
+        })
+        // Load data according to user id get api
+        app.get('/cart/:uid', async (req, res) => {
+            const uid = req.params.uid;
+            const query = { uid: uid };
+            const result = await myOrderCollection.find(query).toArray();
+            res.json(result);
+        })
+        //get all orders
+        app.get('/orders', async (req, res) => {
+            const cursor = myOrderCollection2.find({})
+            const services = await cursor.toArray();
+            res.send(services);
+        })
+        //confirm order by admin
+        app.put('/orders', async (req, res) => {
+            const order = req.body;
+            const filter = { _id: ObjectId(order._id) }
+            const options = { upsert: true };
+            const updateDoc = {
+                $set: {
+                    status: `shipping`
+                },
+            };
+            const result = await myOrderCollection2.updateOne(filter, updateDoc, options);
+            console.log(
+                `${result.matchedCount} document(s) matched the filter, updated ${result.modifiedCount} document(s)`,
+            );
+            res.send(result);
+        })
 
+
+        // add data to cart collection with additional info
+        app.post('/booking/add', async (req, res) => {
+            const booking = req.body;
+            console.log(booking);
+            const result = await myOrderCollection.insertOne(booking)
+            res.json(result)
+        })
+        // Post
+        app.post('/services', async (req, res) => {
+            const service = req.body;
+            const result = await serviceCollection.insertOne(service);
+            res.json(result)
+            console.log(result);
+        });
+        // add review
+        app.post('/reviews', async (req, res) => {
+            const review = req.body;
+            const result = await reviewCollection.insertOne(review);
+            res.json(result)
+            console.log(result);
+        });
+        // get review 
+        app.get('/reviews', async (req, res) => {
+            const cursor = reviewCollection.find({})
+            const reviews = await cursor.toArray();
+            res.send(reviews);
+        });
+
+        // delete one item
+        app.delete('/booking/add/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = { _id: ObjectId(id) };
+            const result = await myOrderCollection.deleteOne(query);
+            res.json(result);
+            console.log(result);
+        });
+        //delete one from products list
+        app.delete('/products/:id', async (req, res) => {
+            const id = req.params.id;
+            const query = { _id: ObjectId(id) };
+            const result = await serviceCollection.deleteOne(query);
+            res.json(result);
+            console.log(result);
+        });
     }
     finally {
 
