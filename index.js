@@ -16,8 +16,8 @@ async function run() {
     try {
         await client.connect();
         const database = client.db('PhonesDB');
-        const database2 = client.db('travel-point');
-        const myOrderCollection2 = database2.collection('usersOrders');
+        // const database2 = client.db('travel-point');
+        // const myOrderCollection2 = database2.collection('usersOrders');
         const serviceCollection = database.collection('phones');
         const myOrderCollection = database.collection('userOrders');
         const reviewCollection = database.collection('userReviews');
@@ -45,7 +45,7 @@ async function run() {
         })
         //get all orders
         app.get('/orders', async (req, res) => {
-            const cursor = myOrderCollection2.find({})
+            const cursor = myOrderCollection.find({})
             const services = await cursor.toArray();
             res.send(services);
         })
@@ -59,7 +59,7 @@ async function run() {
                     status: `shipping`
                 },
             };
-            const result = await myOrderCollection2.updateOne(filter, updateDoc, options);
+            const result = await myOrderCollection.updateOne(filter, updateDoc, options);
             console.log(
                 `${result.matchedCount} document(s) matched the filter, updated ${result.modifiedCount} document(s)`,
             );
