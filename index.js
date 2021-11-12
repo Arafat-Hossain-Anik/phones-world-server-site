@@ -21,6 +21,7 @@ async function run() {
         const serviceCollection = database.collection('phones');
         const myOrderCollection = database.collection('userOrders');
         const reviewCollection = database.collection('userReviews');
+        const usersCollection = database.collection('users');
         console.log('database connected');
         // getting from database
         app.get('/services', async (req, res) => {
@@ -80,6 +81,43 @@ async function run() {
             res.json(result)
             console.log(result);
         });
+        //add user
+        app.post('/users', async (req, res) => {
+            const service = req.body;
+            const result = await usersCollection.insertOne(service);
+            res.json(result)
+            console.log(result);
+        });
+        //update user
+        app.put('/users', async (req, res) => {
+            const email = req.body;
+            // console.log(email);
+            const filter = { email: email.email };
+            const options = { upsert: true };
+            const updateDoc = {
+                $set: {
+                    email: email.email,
+                    role: `admin`
+                },
+            };
+            const result = await usersCollection.updateOne(filter, updateDoc, options);
+            console.log(
+                `${result.matchedCount} document(s) matched the filter, updated ${result.modifiedCount} document(s)`,
+            );
+            console.log(result);
+            res.send(result);
+        });
+        // find user 
+        app.get('/users/:email', async (req, res) => {
+            const email = req.params.email;
+            const query = { email: email };
+            const user = await usersCollection.findOne(query);
+            let isAdmin = false;
+            if (user?.role === 'admin') {
+                isAdmin = true;
+            }
+            res.json({ admin: isAdmin });
+        })
         // add review
         app.post('/reviews', async (req, res) => {
             const review = req.body;
