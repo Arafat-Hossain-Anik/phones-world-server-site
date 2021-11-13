@@ -16,8 +16,6 @@ async function run() {
     try {
         await client.connect();
         const database = client.db('PhonesDB');
-        // const database2 = client.db('travel-point');
-        // const myOrderCollection2 = database2.collection('usersOrders');
         const serviceCollection = database.collection('phones');
         const myOrderCollection = database.collection('userOrders');
         const reviewCollection = database.collection('userReviews');
