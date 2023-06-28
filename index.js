@@ -5,7 +5,6 @@ const cors = require('cors')
 require('dotenv').config()
 const app = express();
 const port = process.env.PORT || 5000;
-
 // middleware
 app.use(cors())
 app.use(express.json());
@@ -20,6 +19,7 @@ async function run() {
         const myOrderCollection = database.collection('userOrders');
         const reviewCollection = database.collection('userReviews');
         const usersCollection = database.collection('users');
+        const blogCollection = database.collection('blog');
         console.log('database connected');
         // getting from database
         app.get('/services', async (req, res) => {
@@ -146,6 +146,19 @@ async function run() {
             res.json(result);
             console.log(result);
         });
+
+        //insert blog
+        app.post('/blog', async (req, res) => {
+            const blog = req.body;
+            const result = await blogCollection.insertOne(blog);
+            res.json(result)
+        })
+        //get all blog
+        app.get('/blog', async (req, res) => {
+            const cursor = blogCollection.find({});
+            const blogs = await cursor.toArray();
+            res.send(blogs);
+        })
     }
     finally {
 
